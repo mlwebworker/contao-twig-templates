@@ -1,0 +1,17 @@
+{% extends '@Contao/block_searchable' %}
+
+{% block content %}
+
+    <{{ tag }}>
+
+    {% for item in items %}
+
+        <li {% if item.class %} class="{{ item.class }}" {% endif %}>
+            {{ item.content }}
+        </li>
+
+    {% endfor %}
+
+    </{{ tag }}>
+
+{% endblock %}
