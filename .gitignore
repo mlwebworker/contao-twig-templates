@@ -1,0 +1,16 @@
+# OS und Windows
+.DS_Store
+Thumbs.db
+%SystemDrive%
+
+# Log files
+*.log
+
+# IDEs
+.buildpath
+.project
+.settings/
+.build/
+.idea/
+nbproject/
+*.code-workspace
