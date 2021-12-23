@@ -1,0 +1,10 @@
+{#  Ausgabe des Accordion-Headers als h2 mit zusaetzlichem span-tag Klasse fuer Galerie als Flexbox #}
+
+<section class="{{ class }} ce_accordion ce_text block" {{ cssID }}{% if style %} style="{{ style }}"{% endif %}>
+
+    <div class="{{ toggler }}"{% if headlineStyle %} style="{{ headlineStyle }}"{% endif %}>
+        <h2><span>{{ headline }}</span></h2>
+    </div>
+
+    <div class="{{ accordion }}">
+        <div class=" mod_article_gallery_flex block">
