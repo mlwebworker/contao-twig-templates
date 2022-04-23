@@ -1,0 +1,11 @@
+{% extends ('@Contao/block_searchable') %}
+
+{% block content %}
+    {% for item in data %}
+        <dl>
+            <dt>{{ item.key }}</dt>
+            <dd>{{ item.value }}</dd>
+        </dl>
+    {% endfor %}
+{% endblock %}
+
