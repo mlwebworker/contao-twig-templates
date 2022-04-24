@@ -1,0 +1,23 @@
+{#
+Checkbox mobile Button hinzugefuegt
+Klasse nav nav--main nav--horizontal eingefuegt (Nutshell Framework)
+Klasse invisible fuer den Text im Label
+#}
+
+<!-- indexer::stop -->
+<input type="checkbox" id="toggle_mobile">
+<label for="toggle_mobile" class="menu_icon" id="hamburger">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="invisible hamburger_text">Menü</span>
+</label>
+<nav class="nav nav--main nav--horizontal {{ class }} block"{{ cssID }}{% if style %} style="{{ style }}" {% endif %}>
+    {% if headline %}
+    <{{ hl }}>{{ headline }}</{{ hl }}>
+{% endif %}
+<a href="{{ request }}#{{ skipId }}" class="invisible">{{ skipNavigation }}</a>
+{{ items|raw }}
+<a id="{{ skipId }}" class="invisible">&nbsp;</a>
+</nav>
+<!-- indexer::continue -->
