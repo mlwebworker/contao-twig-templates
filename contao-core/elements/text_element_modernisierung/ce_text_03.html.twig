@@ -1,0 +1,17 @@
+{% extends '@Contao/block_searchable' %}
+{% import '@ContaoCore/Image/Studio/_macros.html.twig' as studio %}
+
+{% block content %}
+    {% if not addBefore %}
+        {{ text|raw }}
+
+    {% endif %}
+    {% if figure %}
+        {{ studio.figure(figure) }}
+    {% endif %}
+
+    {% if addBefore %}
+        {{ text|raw }}
+    {% endif %}
+
+{% endblock %}
