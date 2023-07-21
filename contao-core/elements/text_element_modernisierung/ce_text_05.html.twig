@@ -1,0 +1,20 @@
+{% extends '@Contao/block_searchable' %}
+{% import '@ContaoCore/Image/Studio/_macros.html.twig' as studio %}
+
+{% block content %}
+    {% if not addBefore %}
+        {% block text %}
+            {{ text|raw }}
+        {% endblock %}
+
+    {% endif %}
+
+    {% if figure %}
+        {{ studio.figure(figure, {attr: {class: 'image_container' ~ floatClass}}) }}
+    {% endif %}
+
+    {% if addBefore %}
+        {{ block('text') }}
+    {% endif %}
+
+{% endblock %}
