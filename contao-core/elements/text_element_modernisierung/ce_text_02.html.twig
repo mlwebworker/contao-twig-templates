@@ -1,0 +1,16 @@
+{% extends '@Contao/block_searchable' %}
+
+{% block content %}
+    {% if not addBefore %}
+        {{ text|raw }}
+
+    {% endif %}
+    {% if addImage %}
+        {% include '@Contao/image' %}
+    {% endif %}
+
+    {% if addBefore %}
+        {{ text|raw }}
+    {% endif %}
+
+{% endblock %}
